@@ -1,15 +1,15 @@
 /* Keeps all sections up to 1280px wide and centered above that viewport width */
-/* .header, .section {
+.header, .section {
 	max-width: 1780px; margin-left: auto; margin-right: auto; 
 	padding-left: 2.4rem; padding-right: 2.4rem; 
-} */
+}
 
 /* Sections are positioned to contain all their absolutely positioned elements */
 .section {
 	position: relative; 
 }
 
-.offer-list {
+.offer-list, .plus-points {
 	margin-bottom: 5rem; 
 }
 
