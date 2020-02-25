@@ -2,6 +2,11 @@
 	Layout
 ----------------------------------------------------------------- */
 
+/* Sets the column count in product presentation lists */
+.product-presentation-list {
+	--product-presentation-column-count: 4;
+}
+
 .product-presentations {
 	display: flex; flex-direction: row; align-items: center; justify-content: flex-end; 
 	padding-top: 5rem; padding-bottom: 5rem; 
@@ -73,4 +78,53 @@
 
 .mark {
 	color: #67c0a6; 
+}
+
+
+/* -----------------------------------------------------------------
+	Meadia Queries
+----------------------------------------------------------------- */
+
+@media ( max-width: 1000px ) {
+	.product-presentations .head {
+		margin-left: 0; 
+	}
+	
+}
+
+@media ( max-width: 1020px ) {
+	.product-presentation-list {
+		--product-presentation-column-count: 3;
+	}
+
+}
+
+@media ( max-width: 860px ) {
+	.product-presentation-list {
+		--product-presentation-column-count: 2;
+	}
+
+}
+
+@media ( max-width: 720px ) {
+	.product-presentations {
+		flex-direction: column; 
+	}
+
+	.product-presentation-list {
+		--product-presentation-column-count: 3;
+	}
+
+	.product-presentations .bx-controls-direction {
+		left: auto; right: 0; 
+
+	}
+	
+}
+
+@media ( max-width: 600px ) {
+	.product-presentation-list {
+		--product-presentation-column-count: 2;
+	}
+
 }
