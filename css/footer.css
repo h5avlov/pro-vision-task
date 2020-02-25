@@ -1,0 +1,54 @@
+/* -----------------------------------------------------------------
+	Layout
+----------------------------------------------------------------- */
+
+footer, .footer-nav {
+	display: flex; align-items: center; 
+}
+
+footer {
+	flex-direction: column;
+}
+
+.footer-nav {
+	flex-direction: row;
+	padding-top: 6.75rem; padding-bottom: 6.75rem; 
+}
+
+.footer-nav .entry {
+	margin-right: 4rem; 
+}
+
+.footer-nav .entry:last-child {
+	margin-right: 0; 
+}
+
+.copyright {
+	align-self: stretch; 
+	padding-top: 1.4rem; padding-bottom: 1.4rem; 
+	border-top: 1px solid; 
+}
+
+/* -----------------------------------------------------------------
+	Typography
+----------------------------------------------------------------- */
+
+.copyright {
+	text-align: center;
+}
+
+/* -----------------------------------------------------------------
+	Color
+----------------------------------------------------------------- */
+
+footer {
+	background-color: #111; 
+	color: #CCC; 
+}
+
+
+.copyright {
+	border-color: #444; 
+}
+
+

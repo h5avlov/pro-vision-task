@@ -1,0 +1,68 @@
+/* -----------------------------------------------------------------
+	Layout
+----------------------------------------------------------------- */
+
+.offer-list .slide {
+	padding-top: 3.75rem; padding-bottom: 3.75rem; 
+	position: relative; 
+}
+
+.offer-list .text-content {
+	box-sizing: border-box; 
+	width: calc( 45% + 3.5rem ); 
+	padding: 5.5rem 10rem 5.5rem 10rem; 
+	position: relative; z-index: 1; 
+	overflow: hidden; 
+}
+
+.offer-list .text-content:before, 
+.offer-list .text-content:after { 
+	display: block;  
+	width: 45%; padding-top: 45%;
+	position: absolute; z-index: -1;  
+	background-size: contain; background-repeat: no-repeat; 
+	content: "";
+}
+
+.offer-list .text-content:before {
+	left: 0; bottom: 4%;
+	transform: rotateZ( -15deg ); 
+	background-image: url( "../images/slider/Asset-26.png" );
+}
+
+.offer-list .text-content:after {
+	width: 38%; padding-top: 38%; 
+	right: 0; top: -20%;
+	transform: rotateZ( -107deg ); 
+	background-image: url( "../images/slider/Asset-17.png" );
+}
+
+.offer-list .image {
+	height: 100%; 
+	position: absolute; left: 45%; right: 0; top: 0; 
+
+}
+
+.offer-list .bx-controls-direction {
+	bottom: 0; right: 0; 
+
+}
+
+
+/* -----------------------------------------------------------------
+	Typography
+----------------------------------------------------------------- */
+
+.offer-list .text {
+	font-family: Lora-Regular;  
+	line-height: 1.75; 
+}
+
+
+/* -----------------------------------------------------------------
+	Color
+----------------------------------------------------------------- */
+
+.offer-list .text-content {
+	background-color: #cde6ec; 
+}

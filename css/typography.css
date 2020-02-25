@@ -1,0 +1,66 @@
+/* PT Sans font declaration */
+@font-face {
+	font-family: PTSans-Regular;
+	src: url( "../fonts/PT_Sans/PTSans-Regular.ttf" );
+}
+
+/* PT Sans Bold font declaration */
+@font-face {
+	font-family: PTSans-Bold;
+	src: url( "../fonts/PT_Sans/PTSans-Bold.ttf" );
+}
+
+/* Open Sans font declaration */
+@font-face {
+	font-family: OpenSans-Regular;
+	src: url( "../fonts/Open_Sans/OpenSans-Regular.ttf" );
+}
+
+/* Open Sans Bold font declaration */
+@font-face {
+	font-family: OpenSans-Bold;
+	src: url( "../fonts/Open_Sans/OpenSans-Bold.ttf" );
+}
+
+/* Open Sans Semibold font declaration */
+@font-face {
+	font-family: OpenSans-Semibold;
+	src: url( "../fonts/Open_Sans/OpenSans-SemiBold.ttf" );
+}
+
+/* Lora Regular font declaration */
+@font-face {
+	font-family: Lora-Regular;
+	src: url( "../fonts/Lora/Lora-Regular.ttf" ); 
+
+}
+
+/* Font Awesome font declaration */
+@font-face {
+	font-family: FontAwesome;
+	src: url( "../fonts/fa-solid-900.ttf" ); 
+
+}
+
+/* Sets font size to use as a base for all font sizes */
+html, body {
+	font-size: 14px; 
+}
+
+/* Sets the heading styles */
+.heading {
+ 	font-family: Lora-Regular; 
+	font-size: 2.75rem; 
+	line-height: 1.15; 
+	letter-spacing: 0.07em; 
+}
+
+.site-title {
+	font-size: 1rem; 
+}
+
+/* Sets the body copy styles */
+.text {
+	font-family: OpenSans-Regular; 
+	line-height: 2.2; 
+}

@@ -1,0 +1,129 @@
+/* Keeps all sections up to 1280px wide and centered above that viewport width */
+/* .header, .section {
+	max-width: 1780px; margin-left: auto; margin-right: auto; 
+	padding-left: 2.4rem; padding-right: 2.4rem; 
+} */
+
+/* Sections are positioned to contain all their absolutely positioned elements */
+.section {
+	position: relative; 
+}
+
+.offer-list {
+	margin-bottom: 5rem; 
+}
+
+.footer {
+	margin-top: 0.75rem; 
+}
+
+/* Usability headings are not a visual part of the page */
+.usability-heading, 
+.offer-list .head {
+	display: none; 
+
+}
+
+/* Sets distance between headings and text, and text and buttons below */
+.heading, .text:last-of-type {
+	margin-bottom: 1.8rem;  
+}
+
+/* Sets the distance between text and element below, usually a button */
+.text:last-of-type {
+	margin-bottom: 2em;  
+}
+
+/* Removes the bottom margin of a paragraph, that is the last element in a block */
+.text:last-child {
+	margin-bottom: 0; 
+}
+
+/* Taking into account styling, semantics and SEO, an image is represented as a figure element with an image element as its descendant */
+.image {
+	height: 150px; 
+}
+
+figure.image {
+	background-size: cover; background-position: center center; 
+}
+
+.image img {
+	display: none; 
+}
+
+/* Buttons are displayed as inline-block to adapt to their label */
+.button {
+	display: inline-block; 
+	padding: 1rem 2rem; 
+	background-color: #444; 
+	color: #EEE; 
+	font-family: OpenSans-Semibold; 
+	text-transform: uppercase; 
+
+}
+
+.section .head, .section .text-content {
+	padding-top: 3.75rem; padding-bottom: 3.75rem; padding-right: 4.5rem; padding-left: 0; 
+
+}
+
+.section .body {
+	position: relative; 
+
+}
+
+/* Control buttons are placed next to each other, usin flexbox */
+.bx-controls-direction {
+	display: flex; flex-direction: row; 
+	position: absolute; 
+}
+
+/* Creates the vertical separating line between the two control buttons */
+.bx-controls-direction:before {
+	display: block;
+	width: 1px; height: 100%;
+	position: absolute; left: 50%; top: 0;  
+	border-right: 1px solid; 
+	content: "";
+	 
+}
+
+.bx-controls-direction a {
+	display: block; 
+	width: 6rem; height: 5rem; 	
+	position: relative; 
+	border: none;  
+	text-indent: -10000px; 
+	overflow: hidden; 
+	cursor: pointer; 
+}
+
+.bx-controls-direction a:before {
+	display: flex; align-items: center; justify-content: center; 
+	width: 100%; height: 100%; 
+	position: absolute; left: 0; top: 0; z-index: 2; 
+	text-indent: 0; 
+	font-family: FontAwesome; 
+	font-size: 1.2rem; 
+}
+
+/* Assigns control icons */
+
+.bx-controls-direction .bx-prev:before {
+	content: "\f0d9"; 
+}
+
+.bx-controls-direction .bx-next:before {
+	content: "\f0da"; 
+}
+
+/* On mouse over the control button set, the separator and the targeted button become fully opaque */
+
+.bx-controls-direction:before, .bx-controls-direction a {
+	opacity: 0.45; 
+}
+
+.bx-controls-direction:hover:before, .bx-controls-direction a:hover {
+	opacity: 1; 
+}

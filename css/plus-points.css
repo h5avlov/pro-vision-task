@@ -1,0 +1,39 @@
+/* -----------------------------------------------------------------
+	Layout
+----------------------------------------------------------------- */
+
+.plus-points {
+	max-width: 960px; margin-left: auto; margin-right: auto; 
+}
+
+.plus-points .entry-list { 
+	display: flex; flex-direction: row; 
+	justify-content: space-between; 
+}
+
+.plus-points .entry {
+	width: 20%; 
+	padding-left: 5rem; 
+	position: relative; 
+}
+
+.plus-points .image {
+	max-width: 5rem; height: auto; 
+	position: absolute; left: 0; top: -2%;
+
+}
+
+/* -----------------------------------------------------------------
+	Typography
+----------------------------------------------------------------- */
+
+.plus-points .entry {
+	font-family: Lora-Regular; font-size: 1rem; 
+	line-height: 1.5; 
+ 	letter-spacing: 0.1em; 
+}
+
+
+/* -----------------------------------------------------------------
+	Color
+----------------------------------------------------------------- */

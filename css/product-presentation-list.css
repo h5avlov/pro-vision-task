@@ -1,0 +1,76 @@
+/* -----------------------------------------------------------------
+	Layout
+----------------------------------------------------------------- */
+
+.product-presentations {
+	display: flex; flex-direction: row; align-items: center; justify-content: flex-end; 
+	padding-top: 5rem; padding-bottom: 5rem; 
+}
+
+.product-presentations .head {
+	box-sizing: border-box; 
+	width: 45rem;   
+	margin-left: calc( ( 100% - 960px ) / 2 ); 
+}
+
+.product-presentation .image {
+	display: block; 
+	margin-bottom: 1.4rem; 
+}
+
+.product-presentation .text {
+	padding-left: 1.4rem; padding-right: 1.4rem; 
+}
+
+.product-presentations .bx-controls-direction {
+	left: -7.5rem; top: -6.5rem; 
+}
+
+.mark {
+	display: flex; align-items: center; justify-content: center;  
+	width: 3.2rem; height: 3.2rem; 
+	position: absolute; top: 0; right: 2rem; 
+	background-image: url( "../images/selected-products/Vector-Smart-Object2.png" ); background-size: contain; 
+}
+
+
+/* -----------------------------------------------------------------
+	Typography
+----------------------------------------------------------------- */
+
+.product-presentations .head .heading {
+	font-size: 2.4rem; 
+	line-height: 1.4; 
+	letter-spacing: 0.075em; 
+}
+
+.product-presentation .text {
+	font-size: 14px; 
+	line-height: 1.5; 
+}
+
+.mark {
+	font-family: OpenSans-Bold; font-size: 0.7rem; 
+	text-transform: uppercase; 
+}
+
+
+/* -----------------------------------------------------------------
+	Color
+----------------------------------------------------------------- */
+
+.selected-products .heading {
+	color: #dea383; 
+}
+
+.selected-products .button {
+	background-color: #dea383; 
+}
+
+.selected-products .bx-controls-direction {
+	color:#dea383; 
+}
+
+.mark {
+	color: #67c0a6; 
+}
