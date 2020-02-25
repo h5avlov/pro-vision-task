@@ -1,7 +1,38 @@
 @media ( max-width: 1000px ) {
 	.product-presentations .head {
 		margin-left: 0; 
-
 	}
 	
+}
+
+@media ( max-width: 980px ) {
+	.header { 
+		flex-direction: column; 
+		margin-bottom: 3.75rem; 
+	}
+
+	.main-nav .nav-link {
+		height: 0.75rem; line-height: 0.75rem; 
+	}
+	
+}
+
+@media ( max-width: 640px ) {
+	.header { 
+		flex-direction: row; align-items: center; 
+	}
+
+	.main-nav .nav-entry-list {
+		flex-direction: column; 
+		height: 0; overflow: hidden; 
+	}
+
+	.main-nav.open .nav-entry-list {
+		height: auto; 
+	}
+
+	.open-nav-button {
+		display: block; 
+	}
+
 }
