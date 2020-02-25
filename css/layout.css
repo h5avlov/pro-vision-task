@@ -1,7 +1,7 @@
 /* Keeps all sections up to 1280px wide and centered above that viewport width */
 .header, .section {
 	max-width: 1780px; margin-left: auto; margin-right: auto; 
-	padding-left: 2.4rem; padding-right: 2.4rem; 
+	border-style: solid; border-color: transparent; border-left-width: 2.4rem; border-right-width: 2.4rem; 
 }
 
 /* Sections are positioned to contain all their absolutely positioned elements */
