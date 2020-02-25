@@ -9,7 +9,7 @@
 
 .offer-list .text-content {
 	box-sizing: border-box; 
-	width: calc( 45% + 3.5rem ); 
+	max-width: 44rem; 
 	padding: 5.5rem 10rem 5.5rem 10rem; 
 	position: relative; z-index: 1; 
 	overflow: hidden; 
@@ -39,7 +39,7 @@
 
 .offer-list .image {
 	height: 100%; 
-	position: absolute; left: 45%; right: 0; top: 0; 
+	position: absolute; top: 0; right: 0; 
 
 }
 
@@ -65,4 +65,30 @@
 
 .offer-list .text-content {
 	background-color: #cde6ec; 
+}
+
+
+/* -----------------------------------------------------------------
+	Meadia Queries
+----------------------------------------------------------------- */
+
+@media ( min-width: 1280px ) {
+	.offer-list .image {
+		left: calc( 44rem - 3.5rem );
+	}
+	
+}
+
+@media ( max-width: 1280px ) {
+	.offer-list .image {
+		left: calc( 100% - 44rem - 3.5rem );
+	}
+	
+}
+
+@media ( max-width: 1020px ) {
+	.offer-list .image {
+		width: 100%; 
+		left: 0; 
+	}
 }
