@@ -16,11 +16,21 @@ footer {
 }
 
 .footer-nav .entry {
-	margin-right: 4rem; 
+	margin-right: 2.5rem; 
 }
 
 .footer-nav .entry:last-child {
 	margin-right: 0; 
+}
+
+.footer-nav .nav-link {
+	padding: 1.4rem; 
+
+}
+
+.footer-nav .nav-link:before {
+	background-color: #CCC; 
+	
 }
 
 .copyright {
@@ -46,9 +56,26 @@ footer {
 	color: #CCC; 
 }
 
-
 .copyright {
 	border-color: #444; 
+}
+
+
+/* -----------------------------------------------------------------
+	Meadia Queries
+----------------------------------------------------------------- */
+
+@media ( max-width: 720px ) {
+
+	.footer-nav {
+		flex-direction: column; justify-content: center; 
+	}
+
+	.footer-nav .entry {
+		margin-right: 0; 
+		text-transform: uppercase; 
+	}
+
 }
 
 

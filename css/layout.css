@@ -4,6 +4,10 @@
 	border-style: solid; border-color: transparent; border-left-width: 2.4rem; border-right-width: 2.4rem; 
 }
 
+.nav-link {
+	display: block; 
+}
+
 /* Sections are positioned to contain all their absolutely positioned elements */
 .section {
 	position: relative; 
@@ -45,7 +49,7 @@
 }
 
 figure.image {
-	background-size: cover; background-position: center center; 
+	background-size: cover; background-position: center center; background-repeat: no-repeat; 
 }
 
 .image img {
