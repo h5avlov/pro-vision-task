@@ -18,6 +18,10 @@
 }
 
 @media ( max-width: 780px ) {
+	.plus-points, .plus-points .entry:last-child {
+		margin-bottom: 0; 
+	}
+
 	.plus-points .entry-list {
 		flex-direction: column; align-items: center; 
 	}
