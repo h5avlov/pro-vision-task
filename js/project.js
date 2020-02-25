@@ -29,26 +29,29 @@ $( document ).ready( function() {
 
 // Adds click event listener to the navigation opening button
 function registerNavOpenOnClick( nav, classNames ) {
-	const button = nav.find( '.open-nav-button' );
+	const openButton = nav.find( '.open-nav-button' );
+	const closeButton = nav.find( '.close-nav-button' );
+	const openClassName = classNames[ 0 ];
+	const closeClassName = classNames[ 1 ];
 
 	// Each click on the button opens and closes navigation in that order
-	button.on( 'click', function() {
-		toggleSection( nav, classNames );
+	nav.on( 'click', function( e ) {
+		const target = $( e.target );
+		if ( target.is( openButton ) ) {
+			switchClassNames( nav, [ closeClassName, openClassName ] );
+		} else if ( target.is( closeButton ) ) {
+			switchClassNames( nav, [ openClassName, closeClassName ] );
+		}
 	} );
 }
 
 // Removes one of the two provided class names and adds the other
-function toggleSection( section, classNamesToToggle ) {
-	for ( let i = 0; i < classNamesToToggle.length; i++ ) {
-		const current = classNamesToToggle[ i ];
-		const next = classNamesToToggle[ ( i + 1 ) % classNamesToToggle.length ]; 
-		if ( section.hasClass( current ) ) {
-			section.removeClass( current );
-			section.addClass( next );
-			return;
-		}
-	}
-	section.addClass( classNamesToToggle[ 0 ] ); 
+function switchClassNames( section, classNamesToSwitch ) {
+	const prev = classNamesToSwitch[ 0 ];
+	const next = classNamesToSwitch[ 1 ];
+
+	section.removeClass( prev );
+	section.addClass( next );
 }
 
 // Defines the number of product presentations in product presentation lists, based on screen width
