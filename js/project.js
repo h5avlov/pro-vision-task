@@ -8,8 +8,13 @@ $( document ).ready( function() {
 	// Copies auto generated slider controls to text content in all slides
 	$( '.offer-list .text-content' ).append( $( '.offer-list .bx-controls-direction' ) ); 
 
-	// Initializes sliders over product presentation lists 
-	const productPresentationColumnCount = defineColumnCount( $( window ).innerWidth() ); 
+	// Initializes sliders over product presentation lists, 
+	// taking into account their number of columns, specified in CSS
+	const productPresentationColumnCount = parseInt( 
+		getComputedStyle( document.querySelector( '.product-presentation-list' ) )
+			.getPropertyValue( '--product-presentation-column-count' ) 
+	);
+
 	$( '.product-presentation-list' ).bxSlider( {
 		minSlides: productPresentationColumnCount,
 		maxSlides: productPresentationColumnCount, 
@@ -52,18 +57,4 @@ function switchClassNames( section, classNamesToSwitch ) {
 
 	section.removeClass( prev );
 	section.addClass( next );
-}
-
-// Defines the number of product presentations in product presentation lists, based on screen width
-function defineColumnCount( viewportWidth ) {
-	let productPresentationColumns = 4; 
-	if ( viewportWidth < 960 && viewportWidth >= 780 ) {
-		productPresentationColumns = 3;
-	} else if ( viewportWidth < 780 && viewportWidth >= 480 ) {
-		productPresentationColumns = 2; 
-	} else if ( viewportWidth < 480 ) {
-		productPresentationColumns = 1;
-	}
-
-	return productPresentationColumns;
 }
