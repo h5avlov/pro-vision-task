@@ -2,6 +2,10 @@
 	Layout
 ----------------------------------------------------------------- */
 
+.site-title {
+	margin-bottom: 0; 
+}
+
 /* Direct descendant elements of header and main navigation are horizontally aligned */
 .header, .main-nav .nav-entry-list {
 	display: flex; flex-direction: row; 
@@ -10,13 +14,16 @@
 /* ID and navigation links are vertically centered */
 .site-title, .main-nav .nav-link {
 	height: 5.5rem; line-height: 5.5rem; 
-
 }
 
 /* Gives distance between ID and main navigation */
 .header .id {
-	margin-right: 8rem; 
-	padding-left: 1.25rem; 
+	margin-right: 4rem; 
+//	padding-left: 1.25rem; 
+}
+
+.open-nav-button {
+	display: none; 
 }
 
 .main-nav .nav-link {
