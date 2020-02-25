@@ -19,11 +19,35 @@
 /* Gives distance between ID and main navigation */
 .header .id {
 	margin-right: 4rem; 
-//	padding-left: 1.25rem; 
 }
 
-.open-nav-button {
+.open-nav-button, 
+.close-nav-button {
+	display: block; 
+	width: 3.75rem; height: 3.75rem; line-height: 3.75rem; 
+	position: relative; 
+	background-color: transparent; 
+	border: none; 
+	text-indent: -10000px; overflow: hidden; 
+	cursor: pointer; 
+}
+
+.open-nav-button:before, 
+.close-nav-button:before {
+	display: block; 
+	width: 100%; height: 100%; 
+	position: absolute; left: 0; top: 0;
+}
+
+.open-nav-button, 
+.close-nav-button {
 	display: none; 
+}
+
+.main-nav.open .close-nav-button {
+	display: block; 
+	position: absolute; top: 1.75rem; right: 1.75rem; 
+	z-index: 3; 
 }
 
 .main-nav .nav-link {
@@ -68,15 +92,42 @@
 	font-family: Lora-Regular; 
 }
 
+.main-nav.open .nav-link {
+	font-size: 1.2rem; line-height: 2.4; 
+	text-transform: uppercase; 
+
+}
+
+.open-nav-button:before, 
+.close-nav-button:before {
+	text-indent: 0; 
+	text-align: center; 
+	font-family: FontAwesome; font-size: 1.4rem; 
+}
+
+.open-nav-button:before {
+	content: "\f0c9";
+}
+
+.close-nav-button:before {
+	content: "\f00d";
+}
+
 
 /* -----------------------------------------------------------------
 	Color
 ----------------------------------------------------------------- */
 
-.site-title {
+.site-title, 
+.open-nav-button:before {
 	color: #79a3d1; 
 }
 
 .main-nav .nav-link:before {
 	background-color:#79a3d1;
+}
+
+.main-nav.open .nav-link, 
+.close-nav-button:before {
+	color: #EEE;
 }
