@@ -57,9 +57,9 @@ function switchClassNames( section, classNamesToSwitch ) {
 // Defines the number of product presentations in product presentation lists, based on screen width
 function defineColumnCount( viewportWidth ) {
 	let productPresentationColumns = 4; 
-	if ( viewportWidth < 960 && viewportWidth >= 640 ) {
+	if ( viewportWidth < 960 && viewportWidth >= 780 ) {
 		productPresentationColumns = 3;
-	} else if ( viewportWidth < 640 && viewportWidth >= 480 ) {
+	} else if ( viewportWidth < 780 && viewportWidth >= 480 ) {
 		productPresentationColumns = 2; 
 	} else if ( viewportWidth < 480 ) {
 		productPresentationColumns = 1;
