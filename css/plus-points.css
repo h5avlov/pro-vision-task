@@ -16,14 +16,14 @@
 }
 
 .plus-points .entry {
-	align-items: flex-start; 
+	align-items: flex-start; justify-content: space-between; 
 	width: 25%; 
 	position: relative; 
 }
 
-.plus-points .image {  
-	display: block;  
-	max-height: 4.75rem; 
+.plus-points .image {   
+	display: block; 
+	width: 4.75rem; height: 100%; 
 	margin-top: -0.75rem; margin-right: 0.2rem; 
 }
 
@@ -62,7 +62,7 @@
 	}
 
 	.plus-points .image {
-		width: 3rem; 
+		max-width: 2.75rem; 
 	} 
 
 }
