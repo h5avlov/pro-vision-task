@@ -2,19 +2,21 @@
 	Layout
 ----------------------------------------------------------------- */
 
-/* Sets the column count in product presentation lists */
+/* CSS variable used in JS to set the column count in product presentation lists, 
+column count is changed on various screen widths simply by using media queries */
 .product-presentation-list {
 	--product-presentation-column-count: 4;
 }
 
 .product-presentations {
 	display: flex; flex-direction: row; align-items: center; justify-content: flex-end; 
-	padding-top: 5rem; padding-bottom: 5rem; 
+	/* padding-top: 5rem; padding-bottom: 5rem;  */
 }
 
 .product-presentations .head {
 	box-sizing: border-box; 
-	max-width: 45rem;   
+	max-width: 45rem; 
+	padding-right: 4.5rem; 
 	margin-left: calc( ( 100% - 960px ) / 2 ); 
 }
 
@@ -24,11 +26,20 @@
 }
 
 .product-presentation .text {
-	padding-left: 1.4rem; padding-right: 1.4rem; 
+	padding-left: 1.2rem; padding-right: 1.2rem; 
+}
+
+.product-presentations .body {
+	padding-top: 5rem; padding-bottom: 5rem; 
 }
 
 .product-presentations .bx-controls-direction {
-	left: -7.5rem; top: -6.5rem; 
+	left: -6rem; top: 0; 
+}
+
+.product-presentation-list {
+	padding-top: 1.75rem; 
+
 }
 
 .mark {
