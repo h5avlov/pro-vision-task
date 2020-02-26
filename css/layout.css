@@ -10,13 +10,9 @@
 
 /* Sections are positioned to contain all their absolutely positioned elements */
 .section {
-	margin-bottom: 2.5rem; 
+	padding-top: 2.5rem; padding-bottom: 2.5rem; 
 	position: relative; 
 }
-
-/* .offer-list, .plus-points {
-	margin-bottom: 5rem; 
-} */
 
 .footer {
 	margin-top: 0.75rem; 

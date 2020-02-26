@@ -2,6 +2,10 @@
 	Layout
 ----------------------------------------------------------------- */
 
+.featured-offer {
+	padding: 0; 
+}
+
 .featured-offer > .image, .featured-offer > .image-set {
 	width: 50%; height: 100%; 
 	position: absolute; left: 0; top: 0; 
