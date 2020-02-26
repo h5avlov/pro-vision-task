@@ -4,23 +4,27 @@
 
 .plus-points {
 	max-width: 960px; margin-left: auto; margin-right: auto; 
+	padding-top: 2.5rem; padding-bottom: 2.5rem; 
+}
+
+.plus-points .entry-list, .plus-points .entry { 
+	display: flex; flex-direction: row; 
 }
 
 .plus-points .entry-list { 
-	display: flex; flex-direction: row; 
-	justify-content: space-between; 
+	justify-content: space-between;
 }
 
 .plus-points .entry {
+	align-items: flex-start; 
 	width: 25%; 
-	padding-left: 5rem; 
 	position: relative; 
 }
 
-.plus-points .image {
-	max-width: 5rem; height: auto; 
-	position: absolute; left: 0; top: -2%;
-
+.plus-points .image {  
+	display: block;  
+	max-height: 4.75rem; 
+	margin-top: -0.75rem; margin-right: 0.2rem; 
 }
 
 /* -----------------------------------------------------------------
@@ -58,7 +62,7 @@
 	}
 
 	.plus-points .image {
-		width: 2.5rem; 
+		width: 3rem; 
 	} 
 
 }
