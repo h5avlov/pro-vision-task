@@ -2,34 +2,35 @@
 	Layout
 ----------------------------------------------------------------- */
 
-.site-title {
-	margin-bottom: 0; 
-}
-
 /* Direct descendant elements of header and main navigation are horizontally aligned */
 .header, 
 .main-nav .nav-entry-list {
 	display: flex; flex-direction: row; 
 }
 
+/* ID and main navigation horizontal centers are aligned */
 .header {
 	align-items: center; 
 }
 
-/* ID and navigation links are vertically centered */
-.site-title {
-	height: 5.5rem; line-height: 5.5rem; 
-}
-
 /* Gives distance between ID and main navigation */
 .header .id {
-	margin-right: 4rem; 
+	margin-right: var( --id-margin-right ); 
 }
+
+.site-title {
+	height: var( --height ); line-height: var( --height ); 
+	margin-bottom: 0; 
+}	
+
+/**
+ * Navigation visibility control buttons 
+ */
 
 .open-nav-button, 
 .close-nav-button {
 	display: block; 
-	width: 3.75rem; height: 3.75rem; line-height: 3.75rem; 
+	width: var( --width ); height: var( --height ); 
 	position: relative; 
 	background-color: transparent; 
 	border: none; 
@@ -37,46 +38,16 @@
 	cursor: pointer; 
 }
 
-.open-nav-button:before, 
-.close-nav-button:before {
-	display: block; 
-	width: 100%; height: 100%; 
-	position: absolute; left: 0; top: 0;
-}
-
+/* Visibility control buttons are not visible initially, 
+their visibility depends on the size of the screen */
 .open-nav-button, 
 .close-nav-button {
 	display: none; 
 }
 
-.main-nav.open .close-nav-button {
-	display: block; 
-	position: absolute; top: 1.75rem; right: 1.75rem; 
-	z-index: 3; 
-}
-
+/* Navigation link clickable sizing */
 .main-nav .nav-link {
-	padding: 1.4rem; 
-}
-
-.nav-link {
-	position: relative; 
-}
-
-.nav-link:before {
-	display: block;
-	width: 0.5rem; height: 0.5rem;
-	position: absolute; left: 0.25rem; top: 50%; transform: rotateZ( 45deg ) translateY( -50% ); 
-	content: "";
-	opacity: 0;
-}
-
-.selected .nav-link:before, .nav-entry-list:hover .nav-link:hover:before {
-	opacity: 1; 
-}
-
-.nav-entry-list:hover .nav-link:before {
-	opacity: 0; 
+	padding: var( --padding-top ) var( --padding-left ); 
 }
 
 
@@ -85,29 +56,26 @@
 ----------------------------------------------------------------- */
 
 .site-title {
-	font-family: PTSans-Bold; 
-	font-size: 1.2rem; 
 	letter-spacing: 0; 
-	text-transform: uppercase; 
-
 }
 
-.main-nav .nav-link {
-	font-family: Lora-Regular; 
+.site-title, 
+.nav-link, .open-nav-button:before, .close-nav-button:before {
+	font-family: var( --font-family ); font-size: var( --font-size ); 
+}
+
+.site-title, 
+.main-nav.open .nav-link {
+	text-transform: uppercase; 
 }
 
 .main-nav.open .nav-link {
-	font-size: 1.2rem;  
-	text-transform: uppercase; 
-
+	font-size: 140%;  
 }
 
-.open-nav-button:before, 
-.close-nav-button:before {
-	text-indent: 0; 
-	text-align: center; 
-	font-family: FontAwesome; font-size: 1.4rem; 
-}
+/**
+ * Sets navigation control buttons icons 
+ */
 
 .open-nav-button:before {
 	content: "\f0c9";
@@ -122,15 +90,6 @@
 	Color
 ----------------------------------------------------------------- */
 
-.site-title, 
-.open-nav-button:before {
-	color: #79a3d1; 
-}
-
-.main-nav .nav-link:before {
-	background-color:#79a3d1;
-}
-
 .main-nav.open .nav-link, 
 .close-nav-button:before {
 	color: #EEE;
@@ -141,17 +100,26 @@
 	Meadia Queries
 ----------------------------------------------------------------- */
 
-@media ( max-width: 980px ) {
+@media ( max-width: 1060px ) and ( min-width: 681px ) {
 	.header { 
 		flex-direction: column; align-items: flex-start; 
-		margin-bottom: 3.75rem; 
+		margin-bottom: 2rem; 
+	}
+
+	.main-nav .nav-link {
+		--padding-top: 1.575rem; 
 	}
 	
 }
 
-@media ( max-width: 680px ) {
+@media ( max-width: 840px ) {
 	.header { 
 		flex-direction: row; justify-content: space-between; align-items: center;
+		margin-bottom: 0; 
+	}
+
+	.header .id {
+		margin-right: 0; 
 	}
 
 	.main-nav .nav-entry-list {
@@ -170,8 +138,19 @@
 		display: block; 
 	}
 
+	.main-nav.open .close-nav-button {
+		display: block; 
+		position: absolute; top: 0; right: 0; 
+		z-index: 3; 
+	}
+
 	.main-nav .nav-link:before {
 		background-color: #EEE;
+	}
+
+	.main-nav .nav-link {
+		padding-top: 1rem; padding-bottom: 1rem; 
+
 	}
 
 }

@@ -14,9 +14,22 @@ column count is changed on various screen widths simply by using media queries *
 
 .product-presentations .head {
 	box-sizing: border-box; 
-	max-width: 45rem; 
+	width: 40%;  
 	padding-right: 4.5rem; 
 	margin-left: calc( ( 100% - 960px ) / 2 ); 
+}
+
+.product-presentations .body {
+	width: 60%; 
+	padding-top: 5rem; padding-bottom: 5rem; 
+}
+
+.product-presentation-list {
+	padding-top: 1.75rem; 
+}
+
+.product-presentation {
+	box-sizing: border-box; 
 }
 
 .product-presentation .image {
@@ -25,26 +38,17 @@ column count is changed on various screen widths simply by using media queries *
 }
 
 .product-presentation .text {
-	padding-left: 1.2rem; padding-right: 1.2rem; 
-}
-
-.product-presentations .body {
-	padding-top: 5rem; padding-bottom: 5rem; 
+	padding-left: 1.2rem; padding-right: 1.2rem; padding-bottom: 2rem; 
 }
 
 .product-presentations .bx-controls-direction {
 	left: -6rem; top: 0; 
 }
 
-.product-presentation-list {
-	padding-top: 1.75rem; 
-
-}
-
 .mark {
 	display: flex; align-items: center; justify-content: center;  
-	width: 3.2rem; height: 3.2rem; 
-	position: absolute; top: 0; right: 2rem; 
+	width: var( --width ); height: var( --height ); 
+	position: absolute; top: 0; right: 0; 
 	background-image: url( "../images/selected-products/Vector-Smart-Object2.png" ); background-size: contain; 
 }
 
@@ -53,19 +57,13 @@ column count is changed on various screen widths simply by using media queries *
 	Typography
 ----------------------------------------------------------------- */
 
-.product-presentations .head .heading {
-	font-size: 2.4rem; 
-	line-height: 1.4; 
-	letter-spacing: 0.075em; 
-}
-
 .product-presentation .text {
 	font-size: 14px; 
 	line-height: 1.5; 
 }
 
-.mark {
-	font-family: OpenSans-Bold; font-size: 0.7rem; 
+.product-presentations .mark {
+	font-family: var( --font-family ); font-size: var( --font-size ); 
 	text-transform: uppercase; 
 }
 
@@ -74,20 +72,23 @@ column count is changed on various screen widths simply by using media queries *
 	Color
 ----------------------------------------------------------------- */
 
-.selected-products .heading {
-	color: #dea383; 
+.product-presentations .heading, 
+.product-presentations .bx-controls-direction :before {
+	color: var( --second-color );
 }
 
-.selected-products .button {
-	background-color: #dea383; 
+.product-presentations .button, 
+.product-presentations .bx-controls-direction:before {
+	background-color: var( --second-color );
 }
 
-.selected-products .bx-controls-direction {
-	color:#dea383; 
+.product-presentations .button:hover {
+	color: var( --second-color ); 
+	border-color: var( --second-color ); 
 }
 
 .mark {
-	color: #67c0a6; 
+	color: var( --fourth-color ); 
 }
 
 
@@ -95,10 +96,14 @@ column count is changed on various screen widths simply by using media queries *
 	Meadia Queries
 ----------------------------------------------------------------- */
 
-@media ( max-width: 1020px ) {
+@media ( max-width: 1180px ) {
 	.product-presentation-list {
 		--product-presentation-column-count: 3;
 	}
+
+	/* .product-presentations .body {
+		width: 50%; 
+	} */
 
 }
 
@@ -109,19 +114,33 @@ column count is changed on various screen widths simply by using media queries *
 	
 }
 
-@media ( max-width: 860px ) {
+@media ( max-width: 980px ) {
 	.product-presentation-list {
 		--product-presentation-column-count: 2;
 	}
 
+	.product-presentations .head {
+		width: 50%;  
+	}
+
+	.product-presentations .body {
+		width: 50%; 
+	}
+
 }
 
-@media ( max-width: 720px ) {
+@media ( max-width: 820px ) {
 	.product-presentations {
 		flex-direction: column; 
 	}
 
-	.product-prexentations .body {
+	.product-presentations .head {
+		width: auto; 
+		padding-right: var( --content-padding-right ); 
+	}
+
+	.product-presentations .body {
+		width: auto; 
 		padding-top: 2.5rem; padding-bottom: 2.5rem; 
 
 	}

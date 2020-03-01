@@ -1,0 +1,127 @@
+:root {
+	/* Font size in pixels to serve as the rem-units base  */
+	--base-font-size: 14px;
+
+	/* General text line height */
+	--line-height: 1.2;
+
+	/**
+	 * Layout
+	 */
+
+	/* Constrains the width of the page content on larger screens, applied on sections, optionally overriden in descendants */
+	--max-content-width: 1280px; 
+
+	/* Defines margins for creating vertical distance between sections */
+	--section-margin-bottom: 2.2rem;
+
+	/* Defines general content horizontal padding, optionally overriden in descendants */
+	--content-padding-left: 1.25rem; 
+	--content-padding-right: var( --content-padding-left );
+
+	/* Defines id to navigation distance */
+	--id-margin-right: 8rem; 
+
+
+	/**
+	 * Color
+	 */
+
+	/* Used colors */
+	--first-color: #79a3d1;
+	--second-color:#dea383;
+	--third-color:#de9083;
+	--fourth-color: #67c0a6;
+
+	/* Text color */
+	--color: #555;
+	--background-color: #CCC;  
+	
+}
+
+/* All headings, navigation links and offer list text have the same font family */
+.heading, 
+.nav-link, 
+.offer-list .text {
+	--font-family: LoraRegular; 
+}
+
+/* Separates paragraph or paragraphs visually from headings and buttons */
+.heading, .text:last-of-type {
+	--margin-bottom: 1.8rem; 
+}
+
+/* Heading style values */
+.heading {
+	--font-size: 2.75rem;
+	--line-height: 1.15;
+	--letter-spacing: 0.07em; 
+}
+
+/* Paragraph style values */
+.text {
+	--margin-bottom: 1.2em;
+
+	--font-family: Arial;
+	--font-size: 1.2rem; 
+	--line-height: 1.8;
+
+	--color: var( --text-color );
+}
+
+/* Button style values */
+.button {
+	--padding-left: 1.75rem; --padding-top: 1.25rem;
+
+	--font-family: OpenSansSemibold; 
+	--font-size: 1rem; 
+
+	--color: #EEE; 
+}
+
+/* New product mark in product presentation lists */
+.product-presentations .mark {
+	--width: 3.2rem; 
+	--height: 3.2rem; 
+	--font-family: PTSansBold; 
+	--font-size: 0.85rem; 
+}
+
+
+/* Control buttons style values */
+.bx-controls-direction a {
+	--width: 6rem; 
+	--height: 5rem; 
+}
+
+/* Navigation visibility control buttons style values */
+.site-title, 
+.nav-control-buttons {
+	--width: 4.5rem; 
+	--height: 4.5rem; 
+}
+
+/* Site title style values */
+.site-title {
+	--height: 4rem; 
+
+	--font-family: PTSansBold;
+	--font-size: 1.4rem; 
+}
+
+/* Icon font general styles */
+.nav-control-buttons :before, 
+.bx-controls-direction :before {
+	--font-family: FontAwesome;
+	--font-size: 1.4rem; 
+}
+
+/* Main navigation style values */
+.main-nav .nav-link {
+	--padding-left: 1.75rem; --padding-top: 2.5rem; 
+
+	--font-size: 1.15rem;
+}
+
+
+

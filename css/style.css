@@ -1,3 +1,4 @@
+@import "./settings.css"; 
 @import "./layout.css";
 @import "./typography.css";
 @import "./color.css"; 
@@ -7,3 +8,4 @@
 @import "./product-presentation-list.css"; 
 @import "./featured-offer.css"; 
 @import "./footer.css"; 
+@import "./media-queries.css"; 

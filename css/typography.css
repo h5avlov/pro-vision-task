@@ -1,36 +1,40 @@
+/**
+ * Font declarations 
+ */
+
 /* PT Sans font declaration */
 @font-face {
-	font-family: PTSans-Regular;
+	font-family: PTSansRegular;
 	src: url( "../fonts/PT_Sans/PTSans-Regular.ttf" );
 }
 
 /* PT Sans Bold font declaration */
 @font-face {
-	font-family: PTSans-Bold;
+	font-family: PTSansBold;
 	src: url( "../fonts/PT_Sans/PTSans-Bold.ttf" );
 }
 
 /* Open Sans font declaration */
 @font-face {
-	font-family: OpenSans-Regular;
+	font-family: OpenSansRegular;
 	src: url( "../fonts/Open_Sans/OpenSans-Regular.ttf" );
 }
 
 /* Open Sans Bold font declaration */
 @font-face {
-	font-family: OpenSans-Bold;
+	font-family: OpenSansBold;
 	src: url( "../fonts/Open_Sans/OpenSans-Bold.ttf" );
 }
 
 /* Open Sans Semibold font declaration */
 @font-face {
-	font-family: OpenSans-Semibold;
+	font-family: OpenSansSemibold;
 	src: url( "../fonts/Open_Sans/OpenSans-SemiBold.ttf" );
 }
 
 /* Lora Regular font declaration */
 @font-face {
-	font-family: Lora-Regular;
+	font-family: LoraRegular;
 	src: url( "../fonts/Lora/Lora-Regular.ttf" ); 
 
 }
@@ -44,23 +48,97 @@
 
 /* Sets font size to use as a base for all font sizes */
 html, body {
-	font-size: 14px; 
+	font-size: var( --base-font-size ); 
 }
+
+/**
+ * Sets font styles, values are defined in and read from the given scope 
+ */
+
+.heading, .subheading, .text, 
+.button, .bx-controls-direction :before {
+	font-family: var( --font-family ); 
+	font-size: var( --font-size ); 
+}
+
+.heading, .subheading, .text {
+	line-height: var( --line-height );  
+	letter-spacing: var( --letter-spacing ); 
+}
+
+
+/**
+ * Control buttons general styles
+ */
+
+/* Pseudo-element, used as a placeholder for the icon */
+:before {
+	text-indent: 0; 
+}
+
+/* Creates the vertical separating line between the two control buttons */
+.nav-control-buttons :before, 
+.bx-controls-direction:before {
+	content: ""; 
+}
+
+/* Control button text is moved out of the screen to be replaced with an icon */
+.bx-controls-direction a {
+	text-indent: -10000px; overflow: hidden; 
+}
+
+/* Assigns prev control button icon */
+.bx-controls-direction .bx-prev:before {
+	content: "\f0d9"; 
+}
+
+/* Assigns next control button icon */
+.bx-controls-direction .bx-next:before {
+	content: "\f0da"; 
+}
+
+.button {
+	font-family: var( --font-family ); font-size: var( --font-size );
+	text-transform: uppercase; 
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Sets the heading styles */
 .heading {
- 	font-family: Lora-Regular; 
-	font-size: 2.75rem; 
-	line-height: 1.15; 
-	letter-spacing: 0.07em; 
-}
-
-.site-title {
-	font-size: 1rem; 
+ 	/* font-family: var( --font-family ); 
+	font-size: var( --font-size ); 
+	line-height: var( --line-height ); 
+	letter-spacing: var( --letter-spacing );  */
 }
 
 /* Sets the body copy styles */
 .text {
-	font-family: OpenSans-Regular; 
-	line-height: 2.2; 
+	/* font-family: var( --font-family ); 
+	font-size: var( --font-size ); 
+	line-height: var( --line-height );  */
 }
+
+.bx-controls-direction a:before {
+	/* text-indent: 0; 
+	font-family: var( --icon-font-family ); 
+	font-size: var( --icon-font-size );  */
+}
+
+/* Assigns control icons */
+
+/* .bx-controls-direction .bx-prev:before {
+	content: "\f0d9"; 
+}
+
+.bx-controls-direction .bx-next:before {
+	content: "\f0da"; 
+} */

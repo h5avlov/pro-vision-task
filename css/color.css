@@ -1,14 +1,49 @@
-.offer-list .heading, 
-.hair-care-products .heading {
-	color: #79a3d1; 
+/* Site title, open navigation button, navigation mark, offer list and hare care products section have the same main color */
+.site-title, 
+.open-nav-button:before, 
+.offer-list .heading, .offer-list .bx-controls-direction :before, 
+.section.hair-care-products .heading, .section.hair-care-products .bx-controls-direction :before {
+	color: var( --first-color ); 
 }
 
-.offer-list .button, 
-.hair-care-products .button {
-	background-color: #79a3d1; 
+/* Site title, open navigation button, navigation mark, offer list and hare care products section have the same main color */
+.main-nav .nav-link:before, 
+.offer-list .button, .offer-list .bx-controls-direction:before, 
+.section.hair-care-products .button, section.hair-care-products .bx-controls-direction:before {
+	background-color: var( --first-color ); 
 }
 
-.offer-list .bx-controls-direction, 
-.hair-care-products .bx-controls-direction {
-	color: #79a3d1; 
+.offer-list .button:hover, 
+.section.hair-care-products .button:hover {
+	color: var( --first-color ); 
+	border-color: var( --first-color );
 }
+
+/* .site-title,
+.open-nav-button:before, .main-nav .nav-link:before, 
+.heading, 
+.subheading, 
+.text, 
+.bx-controls-direction:before, 
+.bx-controls-direction a {
+	color: var( --color ); 
+} */
+
+/* Navigation current page mark */
+/* .main-nav .nav-link:before {
+	background-color: var( --background-color );
+} */
+
+/**
+ * Buttons 
+ */
+
+.button {
+	color: var( --color ); border-color: transparent; 
+}
+
+/* On mouse over changes background and text colors */
+.section .button:hover {
+	background-color: transparent; 
+}
+
