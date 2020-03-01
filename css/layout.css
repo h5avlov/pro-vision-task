@@ -120,13 +120,16 @@ figure.image {
 
 .nav-link {
 	display: block;
+	width: 100%; 
 	position: relative; 
 }
 
 .nav-link:before {
-	display: block;
+	display: inline-block;
 	width: 0.5rem; height: 0.5rem;
-	position: absolute; left: 0.25rem; top: 50%; transform: rotateZ( 45deg ) translateY( -50% ); 
+	margin-right: 0.75rem; 
+	/* position: absolute; left: 0.25rem; top: 50%;  */
+	transform: rotateZ( 45deg ) translateY( -50% ); 
 	content: "";
 	opacity: 0;
 }
