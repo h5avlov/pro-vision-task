@@ -3,12 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/reset.css"> 
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/media-queries.css"> 
+	<link rel="stylesheet" href="./css/reset.css">  
+	<link rel="stylesheet" href="./css/style.css"> 
 	<title>Mock Website</title>
 </head>
-<body><div id="root" class="container-fluid">
+<body><div id="root">
 
 
 <header class="header">
@@ -19,10 +18,6 @@
 	</article>
 	<nav class="main-nav">
 		<h6 class="heading usability-heading">Choose where to go:</h6>
-		<section class="nav-control-buttons">
-			<button class="open-nav-button">Open Navigation</button>
-			<button class="close-nav-button">Close Navigation</button>
-		</section>
 		<ul class="entry-list nav-entry-list">
 			<li class="entry nav-entry selected"><a class="nav-link" href="./index.html">Начало</a></li>
 			<li class="entry nav-entry"><a class="nav-link" href="/index.html">За Нас</a></li>
@@ -31,6 +26,10 @@
 			<li class="entry nav-entry"><a class="nav-link" href="/index.html">Контакти</a></li>
 			<li class="entry nav-entry"><a class="nav-link" href="/index.html">Новини</a></li>
 		</ul>
+		<section class="nav-control-buttons">
+			<button class="open-nav-button">Open Navigation</button>
+			<button class="close-nav-button">Close Navigation</button>
+		</section>
 	</nav>
 </header>
 <main class="main-content">
@@ -219,7 +218,7 @@
 </main>
 <footer class="footer">
 	<ul class="entry-list nav-entry-list footer-nav">
-		<li class="entry nav-entry"><a class="nav-link" href="/index.html">Начало</a></li>
+		<li class="entry nav-entry selected"><a class="nav-link" href="/index.html">Начало</a></li>
 		<li class="entry nav-entry"><a class="nav-link" href="/index.html">За Нас</a></li>
 		<li class="entry nav-entry"><a class="nav-link" href="/index.html">Продукти</a></li>
 		<li class="entry nav-entry"><a class="nav-link" href="/index.html">Къде да купя ?</a></li>
@@ -232,6 +231,7 @@
 
 <script src="./libraries/jquery-3.4.1/jquery-3.4.1.min.js"></script>
 <script src="./libraries/bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+<script src="./libraries/smooth-scroll-2.2.0/jquery.smooth-scroll-2.2.0.js"></script>
 <script src="./js/project.js"></script>
 
 </body>
