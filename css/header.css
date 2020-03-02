@@ -32,6 +32,7 @@
 	content: "";
 }
 
+
 /**
  * Navigation visibility control buttons 
  */
@@ -49,7 +50,6 @@
 
 .close-nav-button {
 	position: fixed; 
-
 }
 
 /* Visibility control buttons are not visible initially, 
@@ -116,7 +116,7 @@ their visibility depends on the size of the screen */
 	Media Queries
 ----------------------------------------------------------------- */
 
-@media ( max-width: 1060px ) and ( min-width: 681px ) {
+@media ( max-width: 1060px ) and ( min-width: 841px ) {
 	.header { 
 		flex-direction: column; align-items: flex-start; 
 		margin-bottom: 2rem; 
@@ -124,6 +124,10 @@ their visibility depends on the size of the screen */
 
 	.main-nav .nav-link {
 		--padding-top: 1.575rem; 
+	}
+
+	.main-nav .nav-entry:first-child .nav-link {
+		padding-left: 0;  
 	}
 	
 }

@@ -89,7 +89,6 @@
 
 @media ( max-width: 1020px ) {
 	.offer-list .text-content {
-	//	margin-left: 5%; // margin-right: 5%; 
 		padding-left: 15%; 
 		background-color: rgba( 205, 230, 236, 0.85 ); 
 	}

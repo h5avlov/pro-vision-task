@@ -15,9 +15,9 @@ footer {
 	padding-top: 6.75rem; padding-bottom: 6.75rem; 
 }
 
-.footer-nav .entry {
+/* .footer-nav .entry {
 	margin-right: 2.5rem; 
-}
+} */
 
 .footer-nav .entry:last-child {
 	margin-right: 0; 
@@ -62,7 +62,7 @@ footer {
 
 
 /* -----------------------------------------------------------------
-	Meadia Queries
+	Media Queries
 ----------------------------------------------------------------- */
 
 @media ( max-width: 720px ) {

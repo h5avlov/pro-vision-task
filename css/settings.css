@@ -118,7 +118,7 @@
 
 /* Main navigation style values */
 .main-nav .nav-link {
-	--padding-left: 1.75rem; --padding-top: 2.5rem; 
+	--padding-left: 0.85rem; --padding-top: 2.5rem; 
 
 	--font-size: 1.15rem;
 }

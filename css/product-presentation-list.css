@@ -12,8 +12,11 @@ column count is changed on various screen widths simply by using media queries *
 	display: flex; flex-direction: row; align-items: center; justify-content: flex-end; 
 }
 
-.product-presentations .head {
+.product-presentations .head, .product-presentations .body {
 	box-sizing: border-box; 
+}
+
+.product-presentations .head { 
 	width: 40%;  
 	padding-right: 4.5rem; 
 	margin-left: calc( ( 100% - 960px ) / 2 ); 
@@ -120,11 +123,11 @@ column count is changed on various screen widths simply by using media queries *
 	}
 
 	.product-presentations .head {
-		width: 50%;  
+		width: 60%;  
 	}
 
 	.product-presentations .body {
-		width: 50%; 
+		width: 40%; 
 	}
 
 }
