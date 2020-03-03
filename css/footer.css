@@ -40,27 +40,22 @@ footer {
 }
 
 .scroll-to-top {
-	display: block; 
-	width: 2.5rem; height: 2.5rem;
+	display: flex; align-items: center; justify-content: center; 
+	width: 3.5rem; height: 3.5rem; 
+	padding: 0; 
 	position: fixed; right: 0.5rem; bottom: 10%; z-index: 3;  
-	border: 1px solid; border-radius: calc( 2.5rem / 2 ); 
-	text-indent: -10000px; 
-	cursor: pointer; 
-	transform: scale( 0 ); 
+	background-color: #FFF; 
+	border: none; border-radius: calc( 3.5rem / 2 );
+	text-indent: -10000px; 	
+	cursor: pointer;  
 
 }
 
 .scroll-to-top:before {
-	display: flex; align-items: center; justify-content: center;
-	width: 100%; height: 100%; 
-	position: absolute; left: 0; top: 0;
-	font-family: FontAwesome; font-size: 1.2rem; 
+	display: block; 
+	font-family: FontAwesome; font-size: 2.25rem;  
+	color: #333; 
 	content: "\f062"; 
-
-}
-
-.scroll-to-top.visible {
-	transform: scale( 1 );  
 
 }
 
@@ -84,6 +79,60 @@ footer {
 
 .copyright {
 	border-color: #444; 
+}
+
+
+/* -----------------------------------------------------------------
+	Animations
+----------------------------------------------------------------- */
+
+.scroll-to-top {
+	opacity: 0;  
+}
+
+.scroll-to-top:before {
+	transform: scale( 0 ); 
+}
+
+.scroll-to-top.visible, 
+.scroll-to-top.visible:before {
+	animation-fill-mode: forwards; 
+}
+
+.scroll-to-top.visible {
+	animation-name: fade-in; animation-duration: 0.125s;  
+
+}
+
+.scroll-to-top.visible:before {
+	animation-name: scale-up; animation-duration: 0.2s; animation-delay: 0.125s;  
+
+}
+
+@keyframes scale-up {
+	0% {
+		transform: scale( 0 );
+	}
+
+	80% {
+		transform: scale( 1 );
+	}
+
+	100% {
+		transform: scale( 0.8 ); 
+	}
+
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
 }
 
 
