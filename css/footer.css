@@ -7,12 +7,12 @@ footer, .footer-nav {
 }
 
 footer {
-	flex-direction: column;
+	flex-direction: column; 
 }
 
 .footer-nav {
-	flex-direction: row;
-	padding-top: 6.75rem; padding-bottom: 6.75rem; 
+	flex-direction: row; 
+	margin-top: 6.75rem; margin-bottom: 6.75rem;
 }
 
 /* .footer-nav .entry {
@@ -24,7 +24,7 @@ footer {
 }
 
 .footer-nav .nav-link {
-	padding: 1.4rem; 
+	padding: 1.4rem;  
 
 }
 
@@ -38,6 +38,32 @@ footer {
 	padding-top: 1.4rem; padding-bottom: 1.4rem; 
 	border-top: 1px solid; 
 }
+
+.scroll-to-top {
+	display: block; 
+	width: 2.5rem; height: 2.5rem;
+	position: fixed; right: 0.5rem; bottom: 10%; z-index: 3;  
+	border: 1px solid; border-radius: calc( 2.5rem / 2 ); 
+	text-indent: -10000px; 
+	cursor: pointer; 
+	transform: scale( 0 ); 
+
+}
+
+.scroll-to-top:before {
+	display: flex; align-items: center; justify-content: center;
+	width: 100%; height: 100%; 
+	position: absolute; left: 0; top: 0;
+	font-family: FontAwesome; font-size: 1.2rem; 
+	content: "\f062"; 
+
+}
+
+.scroll-to-top.visible {
+	transform: scale( 1 );  
+
+}
+
 
 /* -----------------------------------------------------------------
 	Typography
