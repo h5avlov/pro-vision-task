@@ -6,7 +6,7 @@
 	} ); 
 
 	// Copies auto generated slider controls to text content wrapper in all slides
-	const controls = $( '.offer-list .bx-controls-direction' ); 
+	const controls = $( '.offer-list .bx-wrapper .bx-controls .bx-controls-direction' ); 
 	$( '.offer-list .text-content' )
 		.append( controls ); 
 
